@@ -1,0 +1,24 @@
+{
+  "name": "knockout-i18next",
+  "version": "0.1.0",
+  "authors": [
+    "W3Max"
+  ],
+  "description": "knockout-i18next",
+  "main": "src/knockout-i18next.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "knockout": "^3.2.0"
+  }
+}
