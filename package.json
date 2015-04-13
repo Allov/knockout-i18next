@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/W3Max/knockout-i18next.git"
+    "url": "https://github.com/cbcrc/knockout-i18next.git"
   },
-  "author": "W3Max",
+  "author": "Maxime Séguin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/W3Max/knockout-i18next/issues"
+    "url": "https://github.com/cbcrc/knockout-i18next/issues"
   },
-  "homepage": "https://github.com/W3Max/knockout-i18next"
+  "homepage": "https://github.com/cbcrc/knockout-i18next"
 }
