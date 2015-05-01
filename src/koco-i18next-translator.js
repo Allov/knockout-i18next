@@ -1,8 +1,8 @@
 // Copyright (c) CBC/Radio-Canada. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-define(['knockout-i18next'],
-    function(knockoutI18next) {
+define(['koco-i18next'],
+    function(kocoI18next) {
         'use strict';
 
         var Translator = function() {
@@ -10,7 +10,7 @@ define(['knockout-i18next'],
 
             self.translations = {};
 
-            self.lng = knockoutI18next.lng;
+            self.lng = kocoI18next.lng;
 
             self.t = function(key, translationKey, translationOptions) {
                 if (!key) {
@@ -21,7 +21,7 @@ define(['knockout-i18next'],
                     return self.translations[key];
                 }
 
-                var result = self.translations[key] = knockoutI18next.i18next.t((translationKey || key), translationOptions);
+                var result = self.translations[key] = kocoI18next.i18next.t((translationKey || key), translationOptions);
 
                 return result;
             };

@@ -1,11 +1,11 @@
 // Copyright (c) CBC/Radio-Canada. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-define(['knockout', 'i18next', 'knockout-mutex', 'jquery'],
+define(['knockout', 'i18next', 'mutex', 'jquery'],
     function(ko, i18next, Mutex, $) {
         'use strict';
 
-        function KnockoutI18next() {
+        function KocoI18next() {
             var self = this;
 
             self.i18next = i18next;
@@ -47,7 +47,7 @@ define(['knockout', 'i18next', 'knockout-mutex', 'jquery'],
         //                     sendMissingTo: 'current'*/
         //     }
 
-        KnockoutI18next.prototype.init = function(options) {
+        KocoI18next.prototype.init = function(options) {
             var self = this;
             
             return new $.Deferred(function(dfd) {
@@ -84,5 +84,5 @@ define(['knockout', 'i18next', 'knockout-mutex', 'jquery'],
             }).promise();
         };
 
-        return new KnockoutI18next();
+        return new KocoI18next();
     });
