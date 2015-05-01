@@ -1,19 +1,15 @@
 {
-  "name": "knockout-i18next",
-  "version": "0.1.0",
+  "name": "koco-i18next",
+  "version": "0.2.0",
   "description": "",
-  "main": "src/knockout-i18next.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cbcrc/knockout-i18next.git"
+    "url": "https://github.com/cbcrc/koco-i18next.git"
   },
   "author": "Maxime Séguin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cbcrc/knockout-i18next/issues"
+    "url": "https://github.com/cbcrc/koco-i18next/issues"
   },
-  "homepage": "https://github.com/cbcrc/knockout-i18next"
+  "homepage": "https://github.com/cbcrc/koco-i18next"
 }

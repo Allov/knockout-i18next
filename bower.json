@@ -1,11 +1,10 @@
 {
-  "name": "knockout-i18next",
-  "version": "0.1.0",
+  "name": "koco-i18next",
+  "version": "0.2.0",
   "authors": [
     "Maxime Séguin"
   ],
-  "description": "knockout-i18next",
-  "main": "src/knockout-i18next.js",
+  "description": "",
   "moduleType": [
     "amd"
   ],

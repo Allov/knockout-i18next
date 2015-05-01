@@ -1,1 +1,1 @@
-# knockout-i18next
+# koco-i18next
