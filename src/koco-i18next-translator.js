@@ -8,7 +8,7 @@ define(['koco-i18next'],
         var Translator = function() {
             var self = this;
 
-            self.translations = {};
+            self.translations = [];
 
             self.lng = kocoI18next.lng;
 
@@ -17,12 +17,12 @@ define(['koco-i18next'],
                     throw new Error('i18next translator - No key specified.');
                 }
 
-                if (self.translations.hasOwnProperty(key)) {
-                    return self.translations[key];
+                var result = kocoI18next.i18next.t((translationKey || key), translationOptions);
+
+                if (result) {
+                    self.translations.push(result);
                 }
-
-                var result = self.translations[key] = kocoI18next.i18next.t((translationKey || key), translationOptions);
-
+                
                 return result;
             };
         };
@@ -30,11 +30,10 @@ define(['koco-i18next'],
         Translator.prototype.dispose = function() {
             var self = this;
 
-            for (var prop in self.translations) {
-                if (self.translations.hasOwnProperty(prop)) {
-                    self.translations[prop].dispose();
-                }
+            for (var i = 0; i < self.translations.length; i++) {
+                self.translations[i].dispose();
             }
+
         };
 
         return Translator;
