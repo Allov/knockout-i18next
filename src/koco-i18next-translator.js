@@ -8,6 +8,7 @@ define(['koco-i18next'],
         var Translator = function() {
             var self = this;
 
+            self.lng = kocoI18next.lng;
             self.translations = [];
 
             self.t = function(translationKey, translationOptions) {
