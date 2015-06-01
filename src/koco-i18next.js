@@ -33,20 +33,6 @@ define(['knockout', 'i18next', 'mutex', 'jquery'],
             };
         }
 
-        // {
-        //         lng: 'fr',
-        //         getAsync: true,
-        //         fallbackLng: 'fr',
-        //         resGetPath: 'app/locales/__lng__/__ns__.json',
-        //         ns: {
-        //             namespaces: ['fr','en'],
-        //             defaultNs: 'fr',
-        //         }
-        //         /*,
-        //                     debug: true,
-        //                     sendMissingTo: 'current'*/
-        //     }
-
         KocoI18next.prototype.init = function(options) {
             var self = this;
             
