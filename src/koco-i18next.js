@@ -52,7 +52,11 @@ define(['knockout', 'i18next', 'mutex', 'jquery'],
 
                     self.mutex.lock(function(unlock) {
                         i18next.init(jsOptions, function() {
-                            self.lng = ko.observable(jsOptions.lng);
+                            if(ko.isObservable(options.lng)){
+                                self.lng = options.lng;
+                            }else{
+                                self.lng = ko.observable(jsOptions.lng);
+                            }
 
                             self.lng.subscribe(function(value) {
                                 self.mutex.lock(function(u) {
