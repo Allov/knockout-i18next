@@ -1,32 +1,30 @@
 // Copyright (c) CBC/Radio-Canada. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-define(['koco-i18next'],
-    function(kocoI18next) {
-        'use strict';
+import kocoI18next from 'koco-i18next';
 
-        var Translator = function() {
-            var self = this;
 
-            self.lng = kocoI18next.lng;
-            self.translations = [];
+var Translator = function() {
+    var self = this;
 
-            self.t = function(translationKey, translationOptions) {
-                var result = kocoI18next.i18next.t(translationKey, translationOptions);
+    self.lng = kocoI18next.lng;
+    self.translations = [];
 
-                self.translations.push(result);
+    self.t = function(translationKey, translationOptions) {
+        var result = kocoI18next.i18next.t(translationKey, translationOptions);
 
-                return result;
-            };
-        };
+        self.translations.push(result);
 
-        Translator.prototype.dispose = function() {
-            var self = this;
+        return result;
+    };
+};
 
-            for (var i = self.translations.length - 1; i >= 0; i--) {
-                self.translations[i].dispose();
-            }
-        };
+Translator.prototype.dispose = function() {
+    var self = this;
 
-        return Translator;
-    });
+    for (var i = self.translations.length - 1; i >= 0; i--) {
+        self.translations[i].dispose();
+    }
+};
+
+export default Translator;

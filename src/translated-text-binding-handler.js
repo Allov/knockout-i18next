@@ -1,22 +1,22 @@
-define(['knockout', 'jquery', 'koco-i18next'],
-    function(ko, $, kocoI18next) {
-        'use strict';
+import ko from 'knockout';
+import $ from 'jquery';
+import kocoI18next from 'koco-i18next';
 
-        ko.bindingHandlers.translatedText = {
-            init: function(element, valueAccessor, allBindings /*, viewModel, bindingContext*/ ) {
-                var translationKey = ko.unwrap(valueAccessor());
 
-                var translatedTextOptions = allBindings.get('translatedTextOptions');
+ko.bindingHandlers.translatedText = {
+    init: function(element, valueAccessor, allBindings /*, viewModel, bindingContext*/ ) {
+        var translationKey = ko.unwrap(valueAccessor());
 
-                var output = kocoI18next.i18next.t(translationKey, translatedTextOptions);
+        var translatedTextOptions = allBindings.get('translatedTextOptions');
 
-                ko.applyBindingsToNode(element, {
-                    text: output
-                });
+        var output = kocoI18next.i18next.t(translationKey, translatedTextOptions);
 
-                ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
-                    output.dispose();
-                });
-            }
-        };
-    });
+        ko.applyBindingsToNode(element, {
+            text: output
+        });
+
+        ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+            output.dispose();
+        });
+    }
+};
